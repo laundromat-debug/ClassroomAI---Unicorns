@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body style="background-color: rgb(194, 230, 241);" >
+<h1 style="background-color: rgb(234, 225, 157); text-align: center; font-family: 'Inter' , sans-serif; border-radius: 20px;">Welcome to Classmate AI!</h1>
+<div class="container" style="text-align: center; padding-bottom: 20px; font-family: 'Inter' , sans-serif;">
+    <button style="background-color: rgb(207, 232, 148);"   id="Homework helper" onclick="window.location.href='homework.html'">Homework Helper!</button>
+    <button style="background-color: rgb(240, 167, 167); " id="Clubs finder" onclick="window.location.href='clubs.html'">Club Finder!</button>
+    <button style="background-color: rgb(217, 189, 136); " id="Home button" onclick="window.location.href='index.html'">Go Home!</button>
+    <button style="background-color: rgb(210, 175, 228); " id="Schedule Builder" onclick="window.location.href='schedule.html'">Build Your Schedule!</button>
+</div>
+<div style="text-align: center; padding-bottom: 20px; font-family: 'Inter' , sans-serif;" id="qna-box">
+  <label for="userQuestion" style="font-family: 'Inter' , sans-serif;">Ask a question:</label><br>
+  <input style="font-family: 'Inter' , sans-serif;" type="text" id="userQuestion" placeholder="Type your question here:">
+  <button onclick="fetchAnswer()">Get Answer</button>
+</div>
+
+<div id="answerOutput" style="margin-top: 15px; font-weight: bold;"></div>
+
+<script style="text-align: center; padding-bottom: 20px; font-family:'Inter' , sans-serif;">
+  function fetchAnswer() {
+    const question = document.getElementById("userQuestion").value.trim().toLowerCase();
+    const output = document.getElementById("answerOutput"); 
+    output.style.textAlign ="center";
+
+
+    if (question.includes("math team")) {
+      output.innerText = "Math Club is open on Wednesdays and Fridays at room 103 TALI after school.";
+    } else if (question.includes("chess club")) {
+      output.innerText = "Chess club is open on Tuesdays and Thursdays at room 304 TALI after school, 3 to 5:30 PM.";
+    } else if (question.includes("debate team")) {
+      output.innerText = "Debate team is open on Tuesdays in MS 205, 3:30 to 5:30.";
+    } else if (question.includes("robotics")) {
+      output.innerText = "Robotics is open on Mondays and Tuesdays in the MS Makerspace, 3:15 to 5 PM";
+    } else if (question.includes("science olympiad")) {
+      output.innerText = "Science Olympiad is in the US Chemistry room in the TMAC from 4 to 6 PM on Mondays and Thursdays.";
+    } else if (question.includes("can i")) {
+      output.innerText = "Of course! All clubs are open to all students, and anyone can join!";
+    } else if (question.includes("who can")) {
+      output.innerText = "As long as you are a middle school student, you may join any club and likewise for upper school!";
+    } else if (question !== "") {
+      output.innerText = "Sorry, I don't have an answer for that specific question. Try asking about a specific club!.";
+    } else {
+      output.innerText = "Please enter a question first!";
+    }
+  }
+</script>
+
+
+<body style="text-align: center; padding-top: 20px; font-family: 'Inter', sans-serif;" >
+<div style="text-align: center; font-size: large;">
+<img  style="padding-top: 20px; font-family: 'Inter' , sans-serif;" src="images/1645711054_24820.png" width="400px" onclick="showText('secretText')">
+<p style="text-align: center; font-family: 'Inter' , sans-serif;">Math Team</p>
+<p id="secretText" style="display:none; text-align: center; font-family: 'Inter' , sans-serif; padding-bottom: 20px;">In math team you can build community, learn about math and do math competitions like the AMC 8,10, and 12.</p>
+
+<img src="images/165918-5f7e93e1-7d9c-4dfe-923b-d745c0fc3635.png" style="font-family: 'Inter' , sans-serif;" width="400px" onclick="showText('secreTText')">
+<p style="text-align: center; font-family: 'Inter' , sans-serif;">Science olympiad</p>
+<p id="secreTText" style="display:none; text-align: center; font-family: 'Inter' , sans-serif; padding-bottom: 20px;">In science olympiad you can compete in a number of events and foster a community that likes the same sciency things you do! In your team of 3 other people you can make close connnections and learn about a variety of sciences.</p>
+
+<img src="images/Career_Change_Chess_Cartoon.svg"  style="font-family: 'Inter' , sans-serif;" width="400px" onclick="showText('secrEtText')">
+<p style="text-align: center; font-family: 'Inter' , sans-serif;">Chess Team</p>
+<p id="secrEtText" style="display:none; text-align: center; font-family: 'Inter' , sans-serif; padding-bottom: 20px;">In chess team you can raise your elo, elarn techniques and it's a great way to meet other people and level up your chess game at the same time!</p>
+
+<img src="images/channels4_profile.jpg" style="font-family: 'Inter' , sans-serif; " width="300px" onclick="showText('secReTText')">
+<p style="text-align: center; font-family: 'Inter' , sans-serif;">Robotics</p>
+<p id="secReTText" style="display:none; text-align: center; font-family: 'Inter' , sans-serif; padding-bottom: 20px;">With Robotics you can excersize your coding skills and build software and work hands on as well. You can also compete with other schools and gain experience and make connections!</p>
+
+<img src="images/two-guys-stands-discussion-mens-260nw-1104588107.webp" style="font-family: 'Inter' , sans-serif;" width="300px" onclick="showText('sEcretText')">
+<p style="text-align: center; font-family: 'Inter' , sans-serif;">Debate</p>
+<p id="sEcretText" style="display:none; text-align: center; font-family: 'Inter' , sans-serif; padding-bottom: 20px;">In Debate, select the kind of debate you want to do and compete with other schools in different speech and debate categories. Learn techniques and better public speaking skills! </p>
+</div>
+
+<script>
+function showText(id) {
+  var textElement = document.getElementById(id);
+
+  if (textElement.style.display === "none") {
+    textElement.style.display = "block";
+  } else {
+    textElement.style.display = "none";
+  }
+}
+</script>
+</body>
+</body>
+</html>
